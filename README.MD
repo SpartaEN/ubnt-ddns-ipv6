@@ -33,7 +33,7 @@ Install the script and upgrade the ddclient
 
 ```shell
 sudo su -
-curl -o /config/scripts/ddclient.sh https://github.com/SpartaEN/ubnt-ddns-ipv6/releases/latest/download/ddclient.sh
+curl -o /config/scripts/ddclient.sh https://raw.githubusercontent.com/SpartaEN/ubnt-ddns-ipv6/master/ddclient.sh
 chmod +x /config/scripts/ddclient.sh
 sh /config/scripts/ddclient.sh
 ```

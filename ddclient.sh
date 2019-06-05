@@ -4,7 +4,7 @@ set -o pipefail
 ddclient_sum="a548456691c0e08f803219f4b18d6b1c43840e05"
 if [ `sha1sum /usr/sbin/ddclient |cut -d ' ' -f 1` != $ddclient_sum ]
 then
-        curl -fo /tmp/ddclient https://github.com/SpartaEN/ubnt-ddns-ipv6/releases/latest/download/ddclient
+        curl -fo /tmp/ddclient https://raw.githubusercontent.com/SpartaEN/ubnt-ddns-ipv6/master/ddclient/ddclient
         curl -fo /tmp/libnetwork-ipv4addr-perl.deb http://http.us.debian.org/debian/pool/main/libn/libnetwork-ipv4addr-perl/libnetwork-ipv4addr-perl_0.10.ds-2_all.deb
         curl -fo /tmp/libnet-ipv6addr-perl.deb http://http.us.debian.org/debian/pool/main/libn/libnet-ipv6addr-perl/libnet-ipv6addr-perl_0.2.dfsg.1-3_all.deb
         curl -fo /tmp/libnet-netmask-perl.deb http://http.us.debian.org/debian/pool/main/libn/libnet-netmask-perl/libnet-netmask-perl_1.9022-1_all.deb
