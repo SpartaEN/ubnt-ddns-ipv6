@@ -46,3 +46,6 @@ set system task-scheduler task update.ddclient interval 1d
 save
 commit
 ```
+
+### NOTICE
+Since some modules have been removed for wheezy, I switched to Stretch.
