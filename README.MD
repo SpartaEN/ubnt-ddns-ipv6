@@ -32,7 +32,16 @@ Use SSH to connect to your Router
 Install the script and upgrade the ddclient
 
 ```shell
+configure
+set system package repository stretch components 'main contrib non-free' 
+set system package repository stretch distribution stretch
+set system package repository stretch url http://http.us.debian.org/debian
+commit
+save
+exit
 sudo su -
+# If you would like to install the pacakges required manually, use :
+# curl -o /config/scripts/ddclient.sh https://raw.githubusercontent.com/SpartaEN/ubnt-ddns-ipv6/master/ddclient-no-online-repo.sh
 curl -o /config/scripts/ddclient.sh https://raw.githubusercontent.com/SpartaEN/ubnt-ddns-ipv6/master/ddclient.sh
 chmod +x /config/scripts/ddclient.sh
 sh /config/scripts/ddclient.sh
@@ -48,4 +57,4 @@ commit
 ```
 
 ### NOTICE
-Since some modules have been removed for wheezy, I switched to Stretch.
+Since some repos would update to newer versions, please check the file address in `ddclient-no-online-repo.sh` manually.
